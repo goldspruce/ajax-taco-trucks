@@ -1,0 +1,11 @@
+<!-- Here is the partial responsible for for rendering our taco trucks. Make the partial contain the code for one taco truck, and it can handle rendering a single taco truck, or a collection of taco trucks -->
+<tr>
+  <td><%= taco_truck.name %></td>
+  <td><%= taco_truck.rating %></td>
+  <td><%= taco_truck.roach_count %></td>
+  <td><%= taco_truck.price %></td>
+  <td><%= link_to 'Show', taco_truck %></td>
+  <td><%= link_to 'Edit', edit_taco_truck_path(taco_truck) %></td>
+  <!-- Add data remote to the link here so your link is submitted via Ajax -->
+  <td><%= link_to 'Destroy', taco_truck, remote: true, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>

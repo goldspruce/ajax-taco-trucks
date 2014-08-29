@@ -1,0 +1,34 @@
+<!-- Add remote: true to the form so it get submitted via Ajax -->
+<%= form_for(@taco_truck, remote: true) do |f| %>
+  <% if @taco_truck.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@taco_truck.errors.count, "error") %> prohibited this taco_truck from being saved:</h2>
+
+      <ul>
+      <% @taco_truck.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :rating %><br>
+    <%= f.text_field :rating %>
+  </div>
+  <div class="field">
+    <%= f.label :roach_count %><br>
+    <%= f.number_field :roach_count %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

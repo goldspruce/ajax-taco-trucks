@@ -1,0 +1,30 @@
+<div class="row">
+  <h1>Listing taco_trucks</h1>
+
+</div>
+<div class="row">
+  <div class="large-4 columns">
+    <%= render partial: 'form' %>
+  </div>
+
+  <div class="large-8 columns">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Rating</th>
+        <th>Roach count</th>
+        <th>Price</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody id="taco_trucks">
+      <!-- Instead of looking through all the taco trucks, just put the code for one taco truck in a partial, and pass the collection to a call to render -->
+      <%= render @taco_trucks %>
+    </tbody>
+  </table>
+
+  </div>
+</div>
+

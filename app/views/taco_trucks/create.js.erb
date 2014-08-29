@@ -1,0 +1,4 @@
+// This is what we use to put the taco truck created via Ajax into the table
+// It will append the newly created @taco_truck using the _taco_truck.html.erb partial
+// escape_javascript is a method that makes sure there isn't any malicious javaScript or other stuff we don't want rendered
+$('#taco_trucks').append("<%= escape_javascript(render @taco_truck) %>");

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @taco_truck.name %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @taco_truck.rating %>
+</p>
+
+<p>
+  <strong>Roach count:</strong>
+  <%= @taco_truck.roach_count %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @taco_truck.price %>
+</p>
+
+<%= link_to 'Edit', edit_taco_truck_path(@taco_truck) %> |
+<%= link_to 'Back', taco_trucks_path %>
